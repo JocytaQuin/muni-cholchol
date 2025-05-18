@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Municipalidad de Ejemplo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    /* Imagen del header ajustada */
+    header .header-img {
+      width: 100%; /* Expande la imagen al ancho del contenedor */
+      height: 200px; /* Ajusta la altura para hacerla más pequeña */
+      object-fit: cover; /* Cubre el área manteniendo la proporción */
+      object-position: center top; /* Centra la imagen y la alinea en la parte superior */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="cabecera.jpg" alt="Municipalidad" class="header-img" />
+
+    <div class="container-fluid bg-light py-2">
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-outline-primary me-2">Inicio</button>
+        <button class="btn btn-outline-primary me-2">Servicios</button>
+        <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#contactoModal">Contacto</button>
+        <button class="btn btn-outline-primary">Noticias</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cuerpo principal -->
+  <main class="container my-4">
+    <!-- Imagen centrada -->
+    <div class="text-center mb-4">
+      <img src="edif municipal.png" class="img-fluid" alt="Municipalidad" />
+    </div>
+    <!-- Sección de noticias -->
+    <section>
+      <h2>Últimas Noticias</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Becas Municipales</h5>
+              <p class="card-text">El Municipio de Cholchol, liderado por el alcalde Álvaro Labraña, benefició este año 2025 a 100 estudiantes de educación superior.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Reconocimiento a la comunidad</h5>
+              <p class="card-text">El municipio rindió homenaje a los vecinos que trabajaron por la autonomía de Cholchol.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Taller de Acondicionamiento Físico</h5>
+              <p class="card-text">Dirigido a mayores de 18 años, los martes y jueves en el gimnasio municipal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <h5>Ilustre Municipalidad de Cholchol</h5>
+          <p>Dirección: 5040012 Cholchol, Araucanía</p>
+          <p>Teléfono: 45-2356987</p>
+          <p>Email: <a href="mailto:info@municipalidad.com" class="text-white">info@municipalidad.com</a></p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <h5>Enlaces de Interés</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Transparencia</a></li>
+            <li><a href="#" class="text-white">Normativas</a></li>
+            <li><a href="#" class="text-white">Galería</a></li>
+            <li><a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#contactoModal">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de contacto -->
+  <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactoModalLabel">Formulario de Contacto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required />
+              <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" required />
+              <div class="invalid-feedback">Por favor ingrese un correo válido.</div>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+              <div class="invalid-feedback">Por favor ingrese su mensaje.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script de validación -->
+  <script src="script.js"></script>
+</body>
+</html>
